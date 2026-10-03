@@ -1,3 +1,3 @@
 - [x] Define the 15-page coffee story and visual direction.
-- [ ] Build home plus 14 linked pages with page-to-page transitions.
+- [x] Build home plus 14 linked pages with page-to-page transitions.
 - [ ] Verify navigation and layouts on desktop and mobile.
