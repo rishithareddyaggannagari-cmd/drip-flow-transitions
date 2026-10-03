@@ -11,3 +11,4 @@
 
 - Keep the filter-coffee story in one chapter data module and render its 14 chapter URLs through one dynamic route, so navigation and page metadata stay consistent.
 - Use TanStack Router's native View Transitions for internal links, with CSS motion fallbacks and reduced-motion handling, so transitions remain accessible.
+- AI recommendations run in a server function (src/lib/recommend.*) via the AI gateway; chapter suggestions are validated against the chapter data module so links never break.
