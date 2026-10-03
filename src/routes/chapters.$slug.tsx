@@ -10,7 +10,7 @@ export const Route = createFileRoute('/chapters/$slug')({
     return { index };
   },
   head: ({ loaderData }) => {
-    const chapter = chapters[loaderData?.index ?? 0];
+    const chapter = chapters[loaderData?.index ?? 0] ?? chapters[0];
     return { meta: [
       { title: `${chapter.title} — Kappi` },
       { name: 'description', content: chapter.description },
@@ -25,7 +25,7 @@ export const Route = createFileRoute('/chapters/$slug')({
 
 function ChapterPage() {
   const { index } = Route.useLoaderData();
-  const chapter = chapters[index];
+  const chapter = chapters[index] ?? chapters[0];
   const next = chapters[index + 1];
   const previous = chapters[index - 1];
   const number = String(index + 2).padStart(2, '0');
