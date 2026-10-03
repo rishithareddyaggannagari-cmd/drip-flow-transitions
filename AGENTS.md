@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the filter-coffee story in one chapter data module and render its 14 chapter URLs through one dynamic route, so navigation and page metadata stay consistent.
+- Use TanStack Router's native View Transitions for internal links, with CSS motion fallbacks and reduced-motion handling, so transitions remain accessible.
