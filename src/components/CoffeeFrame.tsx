@@ -32,6 +32,7 @@ export function CoffeeFrame() {
         <div className="chapter-menu-scroll">
           <Link to="/" viewTransition tabIndex={menuOpen ? 0 : -1} className="chapter-menu-link"><span>01</span><strong>Home</strong><ArrowRight size={20}/></Link>
           {chapters.map((chapter, i) => <Link key={chapter.slug} to={chapterPath} params={{ slug: chapter.slug }} viewTransition tabIndex={menuOpen ? 0 : -1} className="chapter-menu-link"><span>{String(i + 2).padStart(2, '0')}</span><strong>{chapter.title}</strong><ArrowRight size={20}/></Link>)}
+          <Link to="/find-your-cup" viewTransition tabIndex={menuOpen ? 0 : -1} className="chapter-menu-link"><span>✳</span><strong>Find your cup</strong><ArrowRight size={20}/></Link>
         </div>
         <div className="chapter-menu-bottom">FIFTEEN PAGES. ONE VERY GOOD CUP.</div>
       </div>

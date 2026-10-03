@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FindYourCupRouteImport } from './routes/find-your-cup'
 import { Route as ChaptersSlugRouteImport } from './routes/chapters.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FindYourCupRoute = FindYourCupRouteImport.update({
+  id: '/find-your-cup',
+  path: '/find-your-cup',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ChaptersSlugRoute = ChaptersSlugRouteImport.update({
@@ -25,27 +31,31 @@ const ChaptersSlugRoute = ChaptersSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/find-your-cup': typeof FindYourCupRoute
   '/chapters/$slug': typeof ChaptersSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/find-your-cup': typeof FindYourCupRoute
   '/chapters/$slug': typeof ChaptersSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/find-your-cup': typeof FindYourCupRoute
   '/chapters/$slug': typeof ChaptersSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/chapters/$slug'
+  fullPaths: '/' | '/find-your-cup' | '/chapters/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/chapters/$slug'
-  id: '__root__' | '/' | '/chapters/$slug'
+  to: '/' | '/find-your-cup' | '/chapters/$slug'
+  id: '__root__' | '/' | '/find-your-cup' | '/chapters/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FindYourCupRoute: typeof FindYourCupRoute
   ChaptersSlugRoute: typeof ChaptersSlugRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/find-your-cup': {
+      id: '/find-your-cup'
+      path: '/find-your-cup'
+      fullPath: '/find-your-cup'
+      preLoaderRoute: typeof FindYourCupRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/chapters/$slug': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FindYourCupRoute: FindYourCupRoute,
   ChaptersSlugRoute: ChaptersSlugRoute,
 }
 export const routeTree = rootRouteImport
