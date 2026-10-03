@@ -234,3 +234,25 @@
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
   ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
 }
+
+.cup-page { padding: clamp(2.5rem, 6vw, 6rem) clamp(1.25rem, 5vw, 5rem); max-width: 72rem; margin: 0 auto; animation: rise-in 0.6s ease both; }
+.cup-intro h1 { font-family: 'DM Serif Display', serif; font-size: clamp(3rem, 8vw, 6.5rem); line-height: 0.95; margin: 0.75rem 0 1rem; color: var(--foreground); }
+.cup-intro h1 em { color: var(--primary); }
+.cup-intro p { max-width: 36rem; font-size: 1.1rem; color: var(--muted-foreground); }
+.cup-form { margin-top: 2.5rem; display: grid; gap: 1rem; }
+.cup-form textarea { width: 100%; padding: 1.1rem 1.25rem; font: inherit; font-size: 1.05rem; background: var(--card); color: var(--foreground); border: 1px solid var(--border); border-radius: 0.5rem; resize: vertical; }
+.cup-form textarea:focus { outline: 2px solid var(--primary); outline-offset: 2px; }
+.cup-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.cup-chips button { padding: 0.45rem 0.9rem; border: 1px solid var(--border); border-radius: 999px; font-size: 0.85rem; background: transparent; color: var(--foreground); cursor: pointer; transition: background 0.2s, color 0.2s; }
+.cup-chips button:hover { background: var(--primary); color: var(--primary-foreground); }
+.cup-submit { justify-self: start; display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.95rem 1.5rem; background: var(--primary); color: var(--primary-foreground); border-radius: 999px; font-weight: 600; letter-spacing: 0.08em; font-size: 0.85rem; cursor: pointer; }
+.cup-submit:disabled { opacity: 0.55; cursor: not-allowed; }
+.cup-error { color: var(--destructive); }
+.cup-results { margin-top: 3.5rem; display: grid; gap: 1.25rem; animation: rise-in 0.6s ease both; }
+.cup-summary { font-family: 'DM Serif Display', serif; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.2; color: var(--foreground); }
+.cup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+.cup-card { padding: 1.5rem; border: 1px solid var(--border); border-radius: 0.75rem; background: var(--card); }
+.cup-card span { color: var(--primary); font-weight: 600; font-size: 0.8rem; }
+.cup-card h3 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; margin: 0.4rem 0 0.6rem; color: var(--foreground); }
+.cup-card p { color: var(--muted-foreground); font-size: 0.95rem; }
+.cup-card .cup-brew { margin-top: 0.75rem; color: var(--foreground); }
