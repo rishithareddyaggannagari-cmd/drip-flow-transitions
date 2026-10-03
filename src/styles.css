@@ -173,7 +173,7 @@
   .site-header { height: 68px; }
   .header-center { display: none; }
   .chapter-menu { top: 68px; }
-  .home-hero { height: calc(100svh - 68px); min-height: 640px; max-height: 850px; }
+  .home-hero { height: calc(100svh - 132px); min-height: 590px; max-height: 850px; }
   .home-hero-image { object-position: 62% center; }
   .home-hero-overlay { background: linear-gradient(90deg, color-mix(in oklab, var(--burgundy) 72%, transparent), color-mix(in oklab, var(--burgundy) 18%, transparent)), linear-gradient(0deg, color-mix(in oklab, var(--ink) 54%, transparent), transparent 32%); }
   .hero-content { left: 7vw; top: 47%; }
@@ -191,7 +191,7 @@
   .brand { font-size: 22px; }
   .brand-mark { font-size: 26px; }
   .menu-trigger { gap: 9px; padding: 0 10px; }
-  .home-hero { min-height: 650px; }
+  .home-hero { min-height: 590px; }
   .home-hero-image { object-position: 60% center; }
   .home-hero-overlay { background: linear-gradient(90deg, color-mix(in oklab, var(--burgundy) 72%, transparent), color-mix(in oklab, var(--burgundy) 24%, transparent)), linear-gradient(0deg, color-mix(in oklab, var(--ink) 52%, transparent), transparent 34%); }
   .hero-content { left: 24px; right: 24px; top: 45%; transform: translateY(-45%); }
