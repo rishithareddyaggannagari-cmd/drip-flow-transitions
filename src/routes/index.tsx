@@ -52,6 +52,6 @@ function Home() {
       <div className="section-heading"><div><span className="eyebrow">PICK YOUR MOMENT</span><h2>The whole <em>story.</em></h2></div><span className="section-count">FROM BEAN TO CUP</span></div>
       <div className="chapter-list">{chapters.map((chapter, index) => <Link to={chapterPath} params={{ slug: chapter.slug }} viewTransition className="chapter-row" key={chapter.slug}><span className="row-number">{String(index + 2).padStart(2, '0')}</span><strong>{chapter.title}</strong><span className="row-category">{chapter.category}</span><ArrowRight size={22}/></Link>)}</div>
     </section>
-    <section className="closing-band"><span className="eyebrow">UNTIL THE NEXT CUP</span><p>Some stories are best<br/><em>savoured slowly.</em></p><Link to={chapterPath} params={{ slug: chapters[0].slug }} viewTransition>START READING <ArrowRight size={19}/></Link></section>
+    <section className="closing-band"><span className="eyebrow">UNTIL THE NEXT CUP</span><p>Some stories are best<br/><em>savoured slowly.</em></p><Link to={chapterPath} params={{ slug: chapters[0].slug }} viewTransition>START READING <ArrowRight size={19}/></Link> <Link to="/find-your-cup" viewTransition>FIND YOUR CUP <ArrowRight size={19}/></Link></section>
   </main>;
 }
